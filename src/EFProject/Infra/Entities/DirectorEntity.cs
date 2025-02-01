@@ -9,6 +9,7 @@ namespace EFProject.Infra.Entities
 {
 	public class DirectorEntity:PersonBaseEntity
 	{
+		public string FullName { get; set; }
 		public virtual ICollection<MovieEntity> Movies { get; set; }
 	}
 }

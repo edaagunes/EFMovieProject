@@ -7,6 +7,9 @@ public class DirectorEntityConfiguration : PersonBaseEntityTypeConfiguration<Dir
 	public override void Configure(EntityTypeBuilder<DirectorEntity> builder)
 	{
 		builder.ToTable("Directors");
+		builder.Property(d => d.FullName)
+				.HasMaxLength(150)
+				.HasColumnName("FullName");
 
 		// One Director has many Movies (One-To-Many) --> Making in MovieEntityConfiguration
 		//builder.HasMany(d=>d.Movies).WithOne(m=>m.Director).HasForeignKey(m => m.DirectorId);
