@@ -2,12 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace EFProject.Infra.Context
 {
@@ -25,23 +19,6 @@ namespace EFProject.Infra.Context
 		{
 
 		}
-
-		//protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		//{
-		//	if (optionsBuilder.IsConfigured)
-		//	{
-		//		return;
-		//	}
-
-		//	var configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
-		//	var connStr = configuration.GetConnectionString("SqlServer");
-
-		//	optionsBuilder.UseSqlServer(connStr, options =>
-		//	{
-		//		options.CommandTimeout(5_000);
-		//		options.EnableRetryOnFailure(maxRetryCount: 5);
-		//	});
-		//}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

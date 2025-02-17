@@ -4,6 +4,7 @@ using EFProject.Infra.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFProject.Migrations
 {
     [DbContext(typeof(MovieDbContext))]
-    partial class MovieDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250217132028_ActorHasDataAdded")]
+    partial class ActorHasDataAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,6 +51,88 @@ namespace EFProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Actors", "ef");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b43e34c5-bd33-431f-bb8c-a48ee5343be0"),
+                            CreatedDate = new DateTime(2022, 4, 29, 19, 2, 4, 34, DateTimeKind.Local).AddTicks(1444),
+                            FirstName = "Bilgekan",
+                            LastName = "Yıldızoğlu",
+                            ModifiedDate = new DateTime(2024, 6, 13, 11, 35, 35, 764, DateTimeKind.Local).AddTicks(146)
+                        },
+                        new
+                        {
+                            Id = new Guid("525a13ad-b645-4f00-ad4b-4a4ca2f25779"),
+                            CreatedDate = new DateTime(2024, 8, 14, 8, 6, 43, 323, DateTimeKind.Local).AddTicks(2330),
+                            FirstName = "Arsıl",
+                            LastName = "Pektemek",
+                            ModifiedDate = new DateTime(2023, 3, 19, 3, 21, 19, 506, DateTimeKind.Local).AddTicks(6132)
+                        },
+                        new
+                        {
+                            Id = new Guid("b5d5dc12-9088-4d89-8eb1-26bc2d867fd7"),
+                            CreatedDate = new DateTime(2023, 3, 31, 14, 56, 34, 12, DateTimeKind.Local).AddTicks(7667),
+                            FirstName = "Alparsbeğ",
+                            LastName = "Menemencioğlu",
+                            ModifiedDate = new DateTime(2024, 11, 18, 23, 58, 26, 621, DateTimeKind.Local).AddTicks(8092)
+                        },
+                        new
+                        {
+                            Id = new Guid("b623921c-b69f-4fd9-94cf-b60c81b1f131"),
+                            CreatedDate = new DateTime(2024, 9, 6, 2, 10, 35, 985, DateTimeKind.Local).AddTicks(7923),
+                            FirstName = "Bolsun",
+                            LastName = "Ozansoy",
+                            ModifiedDate = new DateTime(2023, 2, 19, 23, 11, 53, 966, DateTimeKind.Local).AddTicks(8966)
+                        },
+                        new
+                        {
+                            Id = new Guid("358f6fb7-38d5-4511-bae6-3a66a833668e"),
+                            CreatedDate = new DateTime(2022, 2, 24, 3, 36, 56, 660, DateTimeKind.Local).AddTicks(7118),
+                            FirstName = "Bilgekutluk",
+                            LastName = "Yeşilkaya",
+                            ModifiedDate = new DateTime(2024, 3, 3, 22, 52, 56, 708, DateTimeKind.Local).AddTicks(5503)
+                        },
+                        new
+                        {
+                            Id = new Guid("36da875d-d505-4805-ac15-331c77f80787"),
+                            CreatedDate = new DateTime(2021, 8, 16, 9, 37, 3, 234, DateTimeKind.Local).AddTicks(9913),
+                            FirstName = "Bekeç",
+                            LastName = "Taşçı",
+                            ModifiedDate = new DateTime(2023, 12, 25, 7, 55, 3, 787, DateTimeKind.Local).AddTicks(9316)
+                        },
+                        new
+                        {
+                            Id = new Guid("8ed4dcc5-cd4f-4a30-8398-7a54f8a660fe"),
+                            CreatedDate = new DateTime(2022, 4, 22, 3, 59, 2, 237, DateTimeKind.Local).AddTicks(5325),
+                            FirstName = "Gökçe",
+                            LastName = "Tanrıkulu",
+                            ModifiedDate = new DateTime(2024, 2, 26, 5, 4, 37, 790, DateTimeKind.Local).AddTicks(81)
+                        },
+                        new
+                        {
+                            Id = new Guid("5119f8e7-6e4e-4828-b063-a47555465aba"),
+                            CreatedDate = new DateTime(2023, 7, 30, 1, 25, 27, 220, DateTimeKind.Local).AddTicks(9849),
+                            FirstName = "Baymünke",
+                            LastName = "Tanrıkulu",
+                            ModifiedDate = new DateTime(2023, 9, 29, 21, 37, 17, 591, DateTimeKind.Local).AddTicks(4515)
+                        },
+                        new
+                        {
+                            Id = new Guid("3bb613cf-deab-4719-92b2-54647c405f31"),
+                            CreatedDate = new DateTime(2021, 8, 20, 20, 41, 40, 353, DateTimeKind.Local).AddTicks(2320),
+                            FirstName = "Atakağan",
+                            LastName = "Aykaç",
+                            ModifiedDate = new DateTime(2023, 9, 2, 12, 46, 4, 258, DateTimeKind.Local).AddTicks(7118)
+                        },
+                        new
+                        {
+                            Id = new Guid("bf4f2ee8-8014-4cd9-bd57-dec931137a70"),
+                            CreatedDate = new DateTime(2021, 2, 12, 3, 1, 12, 658, DateTimeKind.Local).AddTicks(1607),
+                            FirstName = "Cebe",
+                            LastName = "Aşıkoğlu",
+                            ModifiedDate = new DateTime(2023, 4, 19, 11, 18, 26, 387, DateTimeKind.Local).AddTicks(9600)
+                        });
                 });
 
             modelBuilder.Entity("ActorEntityMovieEntity", b =>

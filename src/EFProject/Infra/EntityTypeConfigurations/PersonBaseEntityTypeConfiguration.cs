@@ -8,7 +8,7 @@ public class PersonBaseEntityTypeConfiguration<TEntity> : BaseEntityTypeConfigur
 	public override void Configure(EntityTypeBuilder<TEntity> builder)
 	{
 		builder.Property(x => x.FirstName).IsRequired().HasMaxLength(100);
-		builder.HasIndex(x => x.FirstName).IsUnique().HasDatabaseName("idx_1");
+		//builder.HasIndex(x => x.FirstName).IsUnique().HasDatabaseName("idx_1");
 		builder.Property(x => x.LastName).IsRequired().HasMaxLength(100);
 
 		base.Configure(builder);
